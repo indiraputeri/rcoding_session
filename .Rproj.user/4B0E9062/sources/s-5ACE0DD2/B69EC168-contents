@@ -30,3 +30,10 @@ data
 library(readxl)
 hdi <- read_xlsx("data/HDR21-22_Statistical_Annex_HDI_Table.xlsx")
 hdi
+
+ny_data <- read_csv("data/bym_nyc_study.csv")
+ny_data
+
+ny_data <- read_csv("data/bym_nyc_study.csv") %>% 
+  filter(med_hhincome > 50000) %>% 
+  arrange(-med_hhincome)
